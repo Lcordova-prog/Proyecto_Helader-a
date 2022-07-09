@@ -22,6 +22,7 @@ public class Heladeria {
         int Mantecado = 0;
         int Fresa = 0;
         int Mora = 0;
+        int limite = 0;
         int Kiwi = 0;
         int Parchita = 0;
         int Sabor = 2;
@@ -30,16 +31,17 @@ public class Heladeria {
         int pe = 0;
 
         do {
-            System.out.println("\n 1. Abrir Tienda \n"
+            System.out.println("");
+            System.out.println("1. Abrir Tienda \n"
                     + "2. Ver \n"
-                    + "3. Atender \n "
+                    + "3. Atender \n"
                     + "4. Elegir porciones\n"
                     + "5. Ver Cuenta\n"
-                    + "6.  Elegir toppings\n"
+                    + "6. Elegir toppings\n"
                     + "7. Facturar");
             capa = leer.nextInt();
             switch (capa) {
-
+             
                 case 1: 
                try (
                             BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt", true));
@@ -48,7 +50,7 @@ public class Heladeria {
                         bw.flush();
                         String linea;
                         while ((linea = br.readLine()) != null) {
-                            co.Insertar(linea + " ");
+                            co.Insertar(linea);
 
                         }
                     } catch (IOException e) {
@@ -63,11 +65,14 @@ public class Heladeria {
 
                 case 3:
                     co.Atender();
+                    limite = 0;
                     Sabor = 2;
                     break;
-
-                case 4:
+                  
+                case 4: 
                     do {
+                          if (!co.vacio()) {
+                        
                         System.out.println("1. Chocolate \n"
                                 + "2. Fresa \n"
                                 + "3. Mantecado \n"
@@ -78,35 +83,42 @@ public class Heladeria {
                                 + "8. Borrar\n"
                                 + "0. Salir");
                         po = leer.nextInt();
-                        switch (po) {
+                              if (limite < 3) {
+                                         switch (po) {
                             case 1:
                                 pi.Apilar("Chocolate", "");
-                                Sabor++;
+                                Sabor++; 
+                                limite++;
                                 chocolate++;
                                 break;
                             case 2:
                                 pi.Apilar("Fresa", "");
                                 Fresa++;
+                                  limite++;
                                 Sabor++;
                                 break;
                             case 3:
                                 pi.Apilar("Mantecado", "");
                                 Sabor++;
+                                  limite++;
                                 Mantecado++;
                                 break;
                             case 4:
                                 pi.Apilar("Mora", " ");
                                 Sabor++;
+                                  limite++;
                                 Mora++;
                                 break;
                             case 5:
                                 pi.Apilar("Kiwi", "");
                                 Sabor++;
+                                  limite++;
                                 Kiwi++;
                                 break;
                             case 6:
                                 pi.Apilar("Parchita", "");
                                 Sabor++;
+                                  limite++;
                                 Parchita++;
                                 break;
                             case 7:
@@ -116,6 +128,7 @@ public class Heladeria {
                             case 8:
                                 if (!pi.vacia()) {
                                     pi.Borrar();
+                                    limite--;
                                     Sabor--;
                                 } else {
                                     System.out.println("No hay porciones");
@@ -127,7 +140,16 @@ public class Heladeria {
                                 break;
 
                         }
+                    }else{
+                                
+                                  System.out.println("No puede solicitar más porciones");
+                          }
+                              }else{
+                                System.out.println("No hay clientes");
+                          }
+                 
                     } while (po != 0);
+
                 case 5:
                     if (!co.vacio()) {
                         System.out.println("Cliente: " + co.Primero());

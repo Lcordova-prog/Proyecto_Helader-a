@@ -44,12 +44,12 @@ public class Cola2 {
        if (!vacio()) {
            Nodo aux = delante;
            while(aux != null){
-               Ver += aux.nom;
+               Ver += aux.nom+"<--";
                aux = aux.sig;
            }
            return Ver;
        }
-       return "Cola vacia";
+       return "No hay clientes...";
    }
    
    public String Atender(){
@@ -58,7 +58,7 @@ public class Cola2 {
            delante = delante.sig;
            return aux;
        }
-       System.out.println("La cola esta vacia");
+       System.out.println("No hay más clientes");
        return " ";
    }
    

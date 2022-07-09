@@ -1,3 +1,6 @@
 Porciones más vendidas: 
 Chocolate:4Uds
 Fresa: 2+Uds
+Porciones más vendidas: 
+Chocolate:0Uds
+Fresa: 0Uds

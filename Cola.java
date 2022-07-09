@@ -1,45 +1,63 @@
 
 package com.mycompany.nicecream;
 
-class nodo{
-    String nom;
-    nodo siguiente;
-    
-    nodo(String da){
-        this.nom = da;
-    }
-}
+
 public class Cola {
-    nodo frente, atras = null;
-    int Numpersonas;
+   nodo frente, atras;
+    class Participantes {
 
-   
-boolean vacio(){
-    return frente == null;
-}
+        String nombre;
+        String apellido;
 
-    public void insertar(String personas){
-        nodo nuevo = new nodo(personas);
-        if (vacio()) {
-            frente = nuevo;
-            atras = frente;
-        }else{
-            atras.siguiente = nuevo;
-            atras = nuevo;
+        Participantes(String nombre, String apellido) {
+            this.nombre = nombre;
+            this.apellido = apellido;
         }
+
+    }
+     class nodo {
+
+        Participantes Clientes;
+       
+        nodo siguiente;
+        
+        nodo(Participantes jugadores) {
+            this.Clientes = jugadores;
+            this.siguiente = null;
+        }
+
     }
     
-    public String mostrar(){
-        String elementos = "";
-        if (!vacio()) {
-            nodo aux = frente;
-            while(aux != null){
-                elementos += ""+aux.nom;
-                aux = aux.siguiente;
-            }
-            return elementos;
+
+    public Cola(String dato) {
+       
+        String[] players = dato.split("\t");
+        String[] apo;
+        for (String juga : players) {
+            apo = juga.split(" ");
+            IntroducirParticipantes(new nodo(new Participantes(apo[0], apo[1])));
+          
+
         }
-        return "Cola vacia";
+
+    }
+
+    private void IntroducirParticipantes(nodo nodo1) {
+        if (this.frente == null) {
+            this.frente = nodo1;
+            
+
+        } else {
+            nodo aux = frente;
+            while (aux.siguiente != frente) {
+                aux = aux.siguiente;
+
+            }
+            aux.siguiente = nodo1;
+          
+
+        }
+
     }
    
     

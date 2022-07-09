@@ -9,14 +9,15 @@ import java.io.PrintWriter;
 
 
 public class Lector {
+    Cola2 a = new Cola2();
      public String leerArchivo(String Nombre) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(Nombre));
-
+        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Participantes.in"));
+ 
         String fila;
         fila = br.readLine();
         String d = fila;
         while ((fila = br.readLine()) != null) {
-            d += "\t" + fila;
+             d+= " - " +fila;
         }
         return d;
 

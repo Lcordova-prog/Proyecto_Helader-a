@@ -29,8 +29,8 @@ public class Pila {
         return top == null;
     }
     
-    public void Apilar(String sabor){
-       nodo1 x = new nodo1(sabor);
+    public void Apilar(String sabor, String Complemento){
+       nodo1 x = new nodo1(sabor,Complemento);
        x.siguiente = top;
        top = x;
        porciones ++;
@@ -53,12 +53,16 @@ public class Pila {
         
     }
     
+    public int CantidadPor(){
+        return porciones;
+    }
+    
     public String mostrar(){
         if (vacia()) {
             System.out.println("No hay más porciones");
             return null;
         }else{
-            return top.sabor;
+            return top.Complemento +"\n"+ top.sabor;
         }
     }
     public nodo1 Borrar(){

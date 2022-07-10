@@ -49,7 +49,7 @@ public class Cola2 {
            }
            return Ver;
        }
-       return "No hay clientes...";
+       return "No hay clientes";
    }
    
    public String Atender(){

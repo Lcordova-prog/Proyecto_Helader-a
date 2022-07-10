@@ -4,3 +4,10 @@ Fresa: 2+Uds
 Porciones más vendidas: 
 Chocolate:0Uds
 Fresa: 0Uds
+Porciones más vendidas: Chocolate: 1
+Fresa:1Uds
+Mantecado: 1Uds
+Porciones más vendidas: 
+Chocolate: 0
+Fresa:0Uds
+Mantecado: 0Uds

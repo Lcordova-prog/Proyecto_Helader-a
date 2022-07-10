@@ -29,29 +29,30 @@ public class Pila {
         return top == null;
     }
     
-    public void Apilar(String sabor, String Complemento){
-       nodo1 x = new nodo1(sabor,Complemento);
+    public void Apilar(String sabor){
+       nodo1 x = new nodo1(sabor);
        x.siguiente = top;
        top = x;
+      
        porciones ++;
-        try(
-                       
-            FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt", true);
-            FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt")
-                ){
-         
-            fw.write("Barquillas vendidas: "+sabor+"$"+"\r\n"+"\r\n");
-            fw.flush();
-            int valor = fr.read();
-            while(valor !=-1){
-               
-                valor = fr.read();
-            }
-        }catch(IOException e){
-            System.out.println("ERROR E/S: "+e);
-        }
+      
         
     }
+    public String Barquilla(){
+    return top.siguiente.siguiente.siguiente.siguiente.sabor;
+}
+      public String Barquilla2(){
+    return top.siguiente.siguiente.siguiente.sabor;
+}
+       public String Barquilla3(){
+    return top.siguiente.siguiente.sabor;
+}
+       public String Barquilla4(){
+           return top.siguiente.sabor;
+       }
+       public String Barquilla5(){
+           return top.sabor;
+       }
     
     public int CantidadPor(){
         return porciones;
@@ -62,7 +63,7 @@ public class Pila {
             System.out.println("No hay más porciones");
             return null;
         }else{
-            return top.Complemento +"\n"+ top.sabor;
+            return top.sabor;
         }
     }
     public nodo1 Borrar(){

@@ -24,3 +24,29 @@
 10/07/2022 10:37:47.442
 
 10/07/2022 10:38:31.666
+
+10/07/2022 11:41:31.680
+
+ Cliente:  Maria Compro una barquilla con : Galletas-Cereales-Chocolate-Parchita-ParchitaCon un valor: 7$
+
+10/07/2022 11:44:34.946
+ Cliente:  Maria Compro una barquilla con : Chocolate-Chocolate-ChocolateCon un valor: 5$
+
+10/07/2022 11:50:13.119
+
+ Cliente:  Maria Compro una barquilla con : Sirope de chocolate-Fresa-Mantecado-Chocolate Con un valor: 6$
+
+10/07/2022 11:51:53.751
+
+ Cliente:  Maria Compro una barquilla con : Galletas-Cereales-Mantecado-Fresa-Chocolate Con un valor: 7$
+
+10/07/2022 12:02:03.617
+ Cliente:  Maria Compro una barquilla con : Nutella-Fresa-Chocolate Con un valor: 5$
+
+10/07/2022 12:02:03.617
+ 
+ Cliente:  Luis Compro una barquilla con: Mantecado-Mantecado Con un valor: 7$
+
+10/07/2022 12:24:56.772
+
+ Cliente:  Maria Compro una barquilla con : Galletas-Kiwi-Mantecado-Mantecado Con un valor: 6$

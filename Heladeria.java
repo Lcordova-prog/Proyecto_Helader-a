@@ -25,6 +25,7 @@ public class Heladeria {
         Lector a = new Lector();
         Cola2 co = new Cola2();
         Pila pi = new Pila();
+        //Porciones de helados
         int chocolate = 0;
         int Mantecado = 0;
         int Fresa = 0;
@@ -33,6 +34,14 @@ public class Heladeria {
         int limite2 = 0;
         int Kiwi = 0;
         int Parchita = 0;
+       //Toppings
+       int sichocolate = 0;
+       int sifresa =0;
+       int sicaramelo = 0;
+       int arequipe = 0;
+       int nutella = 0;
+       int cereales = 0;
+       int galleta = 0;
         int Sabor = 2;
         int capa = 0;
         int po = 0;
@@ -82,7 +91,7 @@ public class Heladeria {
             FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt", true);
             FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt")
                 ){
-                             fw.write("\r"+"\n"+sdf.format(fechaActual)+" "+hora+"\r"+"\n");
+                             fw.write("\r\n"+sdf.format(fechaActual)+" "+hora+"\r"+"\n");
                           if (pi.porciones == 1) {
                            
                                fw.write("\n Cliente:  "+co.Primero()+" Compro una barquilla con: "+pi.Barquilla5()+" Con un valor: "+Sabor+"$"+"\r"+"\n");
@@ -90,19 +99,19 @@ public class Heladeria {
            
                           if (pi.porciones == 2) {
                            
-             fw.write("\r "+"\n Cliente:  "+co.Primero()+" Compro una barquilla con: "+pi.Barquilla5()+"-"+pi.Barquilla4()+"Con un valor: "+Sabor+"$"+"\r"+"\n");
+             fw.write("\r "+"\n Cliente:  "+co.Primero()+" Compro una barquilla con: "+pi.Barquilla5()+"-"+pi.Barquilla4()+" Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
                           if (pi.porciones == 3) {
                           
-             fw.write(" Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"Con un valor: "+Sabor+"$"+"\r"+"\n");
+             fw.write(" Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+" Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
                                if (pi.porciones == 4) {
                                 
-             fw.write("\r"+"\n Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"-"+pi.Barquilla2()+"Con un valor: "+Sabor+"$"+"\r"+"\n");
+             fw.write("\r"+"\n Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"-"+pi.Barquilla2()+" Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
                                 if (pi.porciones == 5) {
                                  
-             fw.write("\r"+"\n Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"-"+pi.Barquilla2()+"-"+pi.Barquilla()+"Con un valor: "+Sabor+"$"+"\r"+"\n");
+             fw.write("\r"+"\n Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"-"+pi.Barquilla2()+"-"+pi.Barquilla()+" Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
                           
             fw.flush();
@@ -119,6 +128,12 @@ public class Heladeria {
                     limite2 = 0;
                     Sabor = 2;
                     pi.porciones = 0;
+                   pi.Borrar();
+                   pi.Borrar();
+                   pi.Borrar();
+                   pi.Borrar();
+                   pi.Borrar();
+                   
                     break;
                   
                 case 4: 
@@ -179,6 +194,24 @@ public class Heladeria {
                                 break;
                             case 8:
                                 if (!pi.vacia()) {
+                                  if (pi.Barquilla5().equals("Chocolate")) {
+                                        chocolate--;
+                                    }
+                                    if (pi.Barquilla5().equals("Fresa")) {
+                                        Fresa--;
+                                    }
+                                     if (pi.Barquilla5().equals("Mantecado")) {
+                                        Mantecado--;
+                                    }
+                                      if (pi.Barquilla5().equals("Mora")) {
+                                        Mora--;
+                                    }
+                                       if (pi.Barquilla5().equals("Kiwi")) {
+                                        Kiwi--;
+                                    }
+                                        if (pi.Barquilla5().equals("Parchita")) {
+                                        Parchita--;
+                                    }
                                     pi.Borrar();
                                     limite--;
                                     Sabor--;
@@ -207,6 +240,8 @@ public class Heladeria {
                         System.out.println("\t"+  "    ________________");
                         System.out.println("\t"+ "    |Cliente: " + co.Primero()+"|");
                         System.out.println("\t"+"   |La cuenta es: " + Sabor + "$"+"|");
+                        System.out.println("\t"+"  Su helado contiene: \n"+pi.MostrarCuenta()
+                        +"                 V");
                         System.out.println("");
                     } else {
                         System.out.println("No hay clientes");
@@ -234,44 +269,73 @@ public class Heladeria {
                             case 1:
                                 pi.Apilar("Sirope de chocolate");
                                 Sabor++;
+                                sichocolate++;
                                 limite2++;
                                 break;
                             case 2:
                                 pi.Apilar("Sirope de fresa");
                                 Sabor++;
+                                sifresa++;
                                 limite2++;
                                 break;
                             case 3:
                                 pi.Apilar("Sirope de caramelo");
                                 Sabor++;
+                                sicaramelo++;
                                 limite2++;
                                 break;
                             case 4:
                                 pi.Apilar("Arequipe");
                                 Sabor++;
+                                arequipe++;
                                 limite2++;
                                 break;
                             case 5:
                                 pi.Apilar("Nutella");
                                 Sabor++;
                                   limite2++;
+                                  nutella++;
                                 break;
                             case 6:
                                 pi.Apilar("Cereales");
                                 Sabor++;
                                 limite2++;
+                                cereales++;
                                 break;
                             case 7:
                                 pi.Apilar("Galletas");
+                                galleta++;
                                 Sabor++;
                                 limite2++;
                                 break;
                          
                             case 8:
                                 if (!pi.vacia()) {
+                                     if (pi.Barquilla5().equals("Sirope de chocolate")) {
+                                        sichocolate--;
+                                    }
+                                     if (pi.Barquilla5().equals("Sirope de fresa")) {
+                                        sifresa--;
+                                    }
+                                     if (pi.Barquilla5().equals("Sirope de caramelo")) {
+                                        sicaramelo--;
+                                    }
+                                       if (pi.Barquilla5().equals("Arequipe")) {
+                                        arequipe--;
+                                    }
+                                      if (pi.Barquilla5().equals("Nutella")) {
+                                        nutella--;
+                                    }
+                                       if (pi.Barquilla5().equals("Cereales")) {
+                                        cereales--;
+                                    }
+                                       if (pi.Barquilla5().equals("Galletas")) {
+                                        galleta--;
+                                    }
                                     pi.Borrar();
                                     limite2--;
                                     Sabor--;
+                                 
                                 } else {
                                     System.out.println("No hay porciones");
                                 }
@@ -300,6 +364,7 @@ public class Heladeria {
 
                 case 7: 
                     if (!co.vacio()) {
+                        
                          try (
                             FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt", true);
                             FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt")) {
@@ -313,15 +378,13 @@ public class Heladeria {
                                           }
                                       }
                              */     
-                                int  numeromenor = 0;
+                                    fw.write("\r\n"+sdf.format(fechaActual)+" "+hora+"\r"+"\n");
                                    for (int i = 0; i < 5; i++) {
                                        if (i == 0) {
-                                             fw.write("\r\n"+"Porciones más vendidas: "+"\r\n"+ "Chocolate: "+chocolate+ "Uds" + "\r\n" + "Fresa:" + Fresa + "Uds" + "\r\n" + "Mantecado: " + Mantecado + "Uds" + "\r\n"+ " Mora: "+ Mora+ " Uds "+"\r\n"+" Kiwi: "+Kiwi+ "Uds" + "\r\n" +"Parchita: " +Parchita+ "Uds" +"\r\n");
-                                       }else if(i < numeromenor){
-                                              fw.write("\r\n"+"Las ventas menores son "+"\r\n"+ "Chocolate: "+chocolate+ "Uds" + "\r\n" + "Fresa:" + Fresa + "Uds" + "\r\n" + "Mantecado: " + Mantecado + "Uds" +"\r\n"+ " Mora: "+ Mora+ " Uds "+"\r\n"+" Kiwi: "+Kiwi+ "Uds" + "\r\n" +"Parchita: " +Parchita+ "Uds" +"\r\n");
-                                       }
-                                
-                            }
+                                             fw.write("\r\n"+"Porciones de helados más vendidas: "+"\r\n"+ "Chocolate: "+chocolate+ "Uds" + "\r\n" + "Fresa:" + Fresa + "Uds" + "\r\n" + "Mantecado: " + Mantecado + "Uds" + "\r\n"+ " Mora: "+ Mora+ " Uds "+"\r\n"+" Kiwi: "+Kiwi+ "Uds" + "\r\n" +"Parchita: " +Parchita+ "Uds" +"\r\n");
+                                             fw.write("\r\n"+"Toppings más vendidos: "+"\r\n"+"Sirope de chocolate: "+sichocolate+"Uds"+"\r\n"+" Sirope de fresa: "+sifresa+"Uds"+"\r\n"+" Sirope de caramelo: "+sicaramelo+"Uds"+"\r\n"+" Arequipe: "+arequipe+"Uds"+"\r\n"+" Nutella: "+nutella+"Uds"+"\r\n"+" Cereales: "+cereales+"Uds"+"\r\n"+" Galletas: "+galleta+"Uds"+"\r\n");
+                                        } 
+                            } 
                                    
                        
                         fw.flush();

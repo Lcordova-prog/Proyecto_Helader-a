@@ -79,5 +79,17 @@ public class Pila {
         }
         
     }
+    public String MostrarCuenta(){
+    nodo1 a = top;
+    String p = "";
+    while(!vacia()){
+        p += "\t"+"\t"+top.sabor+"\n";
+       top = top.siguiente;
+       
+    }
+    top = a;
+    
+    return p;
+}
     
 }

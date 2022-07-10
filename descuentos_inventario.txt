@@ -123,3 +123,22 @@ Sirope de chocolate: 0Uds
  Nutella: 0Uds
  Cereales: 0Uds
  Galletas: 0Uds
+
+10/07/2022 12:24:56.772
+
+Porciones de helados más vendidas: 
+Chocolate: 0Uds
+Fresa:0Uds
+Mantecado: 2Uds
+ Mora: 0 Uds 
+ Kiwi: 1Uds
+Parchita: 0Uds
+
+Toppings más vendidos: 
+Sirope de chocolate: 0Uds
+ Sirope de fresa: 0Uds
+ Sirope de caramelo: 0Uds
+ Arequipe: 0Uds
+ Nutella: 0Uds
+ Cereales: 0Uds
+ Galletas: 1Uds

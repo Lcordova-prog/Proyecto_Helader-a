@@ -28,3 +28,11 @@ Mantecado: 0Uds
  Mora: 0 Uds 
  Kiwi: 1Uds
 Parchita: 2Uds
+
+Porciones más vendidas: 
+Chocolate: 0Uds
+Fresa:0Uds
+Mantecado: 0Uds
+ Mora: 0 Uds 
+ Kiwi: 0Uds
+Parchita: 0Uds

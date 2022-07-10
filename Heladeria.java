@@ -39,15 +39,18 @@ public class Heladeria {
         int pe = 0;
 
         do {
-            System.out.println("");
-            System.out.println("1. Abrir Tienda \n"
-                    + "2. Ver \n"
-                    + "3. Atender \n"
-                    + "4. Elegir porciones\n"
-                    + "5. Ver Cuenta\n"
-                    + "6. Elegir toppings\n"
-                    + "7. Facturar\n"
+            System.out.println("         <HELADERIA NICECREAM> \n"
+                    + "<HACE HELADOS DE VERDAD EN POCOS MINUTOOOS> ");
+            System.out.println("\t"  +"--------------------");
+            System.out.println("\t"  +"| 1. Abrir Tienda   |\n"
+                    + "\t"  +"| 2. Ver            |\n"
+                    + "\t"  +"| 3. Atender        |\n"
+                    + "\t"  +"| 4.Elegir porciones|\n"
+                    + "\t"  +"| 5. Ver Cuenta     |\n"
+                    + "\t"  +"| 6. Elegir toppings|\n"
+                    + "\t"  +"| 7. Facturar       |"
                     );
+            System.out.println("\t"  +"--------------------");
             capa = leer.nextInt();
             switch (capa) {
              
@@ -200,8 +203,11 @@ public class Heladeria {
                     break;
                 case 5:
                     if (!co.vacio()) {
-                        System.out.println("Cliente: " + co.Primero());
-                        System.out.println("La cuenta es: " + Sabor + "$");
+                        System.out.println("\t"+"   FACTURA DE CUENTA");
+                        System.out.println("\t"+  "    ________________");
+                        System.out.println("\t"+ "    |Cliente: " + co.Primero()+"|");
+                        System.out.println("\t"+"   |La cuenta es: " + Sabor + "$"+"|");
+                        System.out.println("");
                     } else {
                         System.out.println("No hay clientes");
                     }
@@ -293,7 +299,8 @@ public class Heladeria {
                     break;
 
                 case 7: 
-                        try (
+                    if (!co.vacio()) {
+                         try (
                             FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt", true);
                             FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt")) {
                          
@@ -326,7 +333,11 @@ public class Heladeria {
                     } catch (IOException e) {
                         System.out.println("ERROR E/S: " + e);
                     }
-                    break;
+                    
+                    }else{
+                        System.out.println("No hay ventas para facturar");
+                    }
+                     break;  
                     
                 case 8:
                       System.out.println(pi.mostrar());

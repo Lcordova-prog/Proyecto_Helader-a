@@ -5,3 +5,16 @@
  Cliente:  Luis Compro una barquilla con : Cereales-Fresa-Fresa
 
 09/07/2022 22:23:40.149
+
+09/07/2022 22:51:43.265
+
+ Cliente:  Maria Compro una barquilla con: ChocolateCon un valor: 3
+
+09/07/2022 22:54:50.008
+ Cliente:  Maria Compro una barquilla con : Galletas-Parchita-Kiwi5$
+
+09/07/2022 23:16:52.879
+ Cliente:  Maria Compro una barquilla con : Fresa-Chocolate-ChocolateCon un valor: 5$
+
+09/07/2022 23:16:52.879
+ Cliente:  Luis Compro una barquilla con : Chocolate-Chocolate-ChocolateCon un valor: 5$

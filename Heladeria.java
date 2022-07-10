@@ -82,24 +82,24 @@ public class Heladeria {
                              fw.write("\r"+"\n"+sdf.format(fechaActual)+" "+hora+"\r"+"\n");
                           if (pi.porciones == 1) {
                            
-                               fw.write("\n Cliente:  "+co.Primero()+" Compro una barquilla con: "+pi.Barquilla5()+"\r"+"\n");
+                               fw.write("\n Cliente:  "+co.Primero()+" Compro una barquilla con: "+pi.Barquilla5()+" Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
            
                           if (pi.porciones == 2) {
                            
-             fw.write("\r "+"\n Cliente:  "+co.Primero()+" Compro una barquilla con: "+pi.Barquilla5()+"-"+pi.Barquilla4()+"\r"+"\n");
+             fw.write("\r "+"\n Cliente:  "+co.Primero()+" Compro una barquilla con: "+pi.Barquilla5()+"-"+pi.Barquilla4()+"Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
                           if (pi.porciones == 3) {
                           
-             fw.write(" Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"\r"+"\n");
+             fw.write(" Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
                                if (pi.porciones == 4) {
                                 
-             fw.write("\r"+"\n Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"-"+pi.Barquilla2()+"\r"+"\n");
+             fw.write("\r"+"\n Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"-"+pi.Barquilla2()+"Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
                                 if (pi.porciones == 5) {
                                  
-             fw.write("\r"+"\n Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"-"+pi.Barquilla2()+"-"+pi.Barquilla()+"\r"+"\n");
+             fw.write("\r"+"\n Cliente:  "+co.Primero()+" Compro una barquilla con : "+pi.Barquilla5()+"-"+pi.Barquilla4()+"-"+pi.Barquilla3()+"-"+pi.Barquilla2()+"-"+pi.Barquilla()+"Con un valor: "+Sabor+"$"+"\r"+"\n");
                           }
                           
             fw.flush();
@@ -132,7 +132,7 @@ public class Heladeria {
                                 + "8. Borrar\n"
                                 + "0. Salir");
                         po = leer.nextInt();
-                              if (limite < 3) {
+                              if (limite < 3 || po == 7 || po == 8 || po == 0) {
                                          switch (po) {
                             case 1:
                                 pi.Apilar("Chocolate");
@@ -305,8 +305,17 @@ public class Heladeria {
                                              
                                           }
                                       }
-*/
-                                     fw.write("Porciones más vendidas: \n"+ "Chocolate: "+chocolate+ "\r\n" + "Fresa:" + Fresa + "Uds" + "\r\n" + "Mantecado: " + Mantecado + "Uds" + "\r\n");
+                             */     
+                                int  numeromenor = 0;
+                                   for (int i = 0; i < 5; i++) {
+                                       if (i == 0) {
+                                             fw.write("\r\n"+"Porciones más vendidas: "+"\r\n"+ "Chocolate: "+chocolate+ "Uds" + "\r\n" + "Fresa:" + Fresa + "Uds" + "\r\n" + "Mantecado: " + Mantecado + "Uds" + "\r\n"+ " Mora: "+ Mora+ " Uds "+"\r\n"+" Kiwi: "+Kiwi+ "Uds" + "\r\n" +"Parchita: " +Parchita+ "Uds" +"\r\n");
+                                       }else if(i < numeromenor){
+                                              fw.write("\r\n"+"Las ventas menores son "+"\r\n"+ "Chocolate: "+chocolate+ "Uds" + "\r\n" + "Fresa:" + Fresa + "Uds" + "\r\n" + "Mantecado: " + Mantecado + "Uds" +"\r\n"+ " Mora: "+ Mora+ " Uds "+"\r\n"+" Kiwi: "+Kiwi+ "Uds" + "\r\n" +"Parchita: " +Parchita+ "Uds" +"\r\n");
+                                       }
+                                
+                            }
+                                   
                        
                         fw.flush();
                         int valor = fr.read();

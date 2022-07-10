@@ -1,13 +1,30 @@
 Porciones más vendidas: 
-Chocolate:4Uds
-Fresa: 2+Uds
-Porciones más vendidas: 
-Chocolate:0Uds
-Fresa: 0Uds
-Porciones más vendidas: Chocolate: 1
+Chocolate: 2Uds
 Fresa:1Uds
-Mantecado: 1Uds
+Mantecado: 0Uds
 Porciones más vendidas: 
-Chocolate: 0
+Chocolate: 5Uds
+Fresa:1Uds
+Mantecado: 0Uds
+Porciones más vendidas: 
+Chocolate: 5Uds
+Fresa:1Uds
+Mantecado: 3Uds
+Porciones más vendidas: 
+Chocolate: 1Uds
+Fresa:0Uds
+Mantecado: 0Uds Mora: 0 Kiwi: 2Parchita: 0
+Porciones más vendidas: 
+Chocolate: 2Uds
+Fresa:0Uds
+Mantecado: 1Uds
+ Mora: 0 Uds 
+ Kiwi: 0Uds
+Parchita: 0Uds
+Porciones más vendidas: 
+Chocolate: 0Uds
 Fresa:0Uds
 Mantecado: 0Uds
+ Mora: 0 Uds 
+ Kiwi: 1Uds
+Parchita: 2Uds

@@ -16,12 +16,10 @@ public class Cola2 {
 
     }
 // Método para determinar si la cola esta vacia o no. 
-
     boolean vacio() {
         return delante == null;
     }
-    //Método para ingresar las personas en la cola
-
+ //Método para ingresar las personas en la cola
     public void Insertar(String nom) {
 
         Nodo w = new Nodo(nom);
@@ -35,7 +33,6 @@ public class Cola2 {
 
     }
 // Método para mostrar las personas de la cola
-
     public String mostrar() {
         String Ver = "";
         if (!vacio()) {
@@ -49,7 +46,6 @@ public class Cola2 {
         return "No hay clientes";
     }
 // Método para eliminar personas de la cola, pero en este caso sería atenderlos
-
     public String Atender() {
         if (!vacio()) {
             String aux = delante.nom;
@@ -60,7 +56,7 @@ public class Cola2 {
         return " ";
     }
 
-    // Método que muestra el primero en la cola
+  // Método que muestra el primero en la cola
     public String Primero() {
         return delante.nom;
     }

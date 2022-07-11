@@ -111,10 +111,16 @@ public class Heladeria {
                       try (
                             FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt", true);
                             FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt")) {
-                        fw.write("\r\n" + sdf.format(fechaActual) + " " + hora + "\r" + "\n");
-                          if (pi.porciones == 0 && !co.vacio()) {
-                              fw.write(" Cliente: "+co.Primero()+" No realizo ninguna compra");
+                          if (!co.vacio()) {
+                            fw.write("\r\n" + sdf.format(fechaActual) + " " + hora + "\r" + "\n");  
                           }
+                          
+                        
+                          if (pi.porciones == 0 && !co.vacio()) {
+                               fw.write("\n Cliente:  " + co.Primero() + " No realizo ninguna compra" + "\r" + "\n");
+                          }
+                          
+                          
                         if (pi.porciones == 1) {
 
                             fw.write("\n Cliente:  " + co.Primero() + " Compro una barquilla con: " + pi.Barquilla5() + " Con un valor: " + Sabor + "$" + "\r" + "\n");
@@ -146,21 +152,18 @@ public class Heladeria {
                     } catch (IOException e) {
                         System.out.println("ERROR E/S: " + e);
                     }
-                      if (!co.vacio()) {
-                           co.Atender();
-                    }else{
-                          System.out.println("No quedan personas");
-                      }
+                     
+                    co.Atender();
                     limite = 0;
                     limite2 = 0;
                     Sabor = 2;
-                    pi.porciones = 0;
+                  
                     pi.Borrar();
                     pi.Borrar();
                     pi.Borrar();
                     pi.Borrar();
                     pi.Borrar();
-
+                     pi.porciones = 0;
                     break;
 
                 case 4:
@@ -409,7 +412,7 @@ public class Heladeria {
                     break;
 
                 case 7:
-                    if (!co.vacio()) {
+                    if (co.vacio()) {
                              try (
                                 FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt", true);
                                 FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt")) {
@@ -442,9 +445,7 @@ public class Heladeria {
                         }
 
                    
-                        }else{
-                          System.out.println("No hay personas para facturar");
-                    }
+                        }
 
                       
                     break;

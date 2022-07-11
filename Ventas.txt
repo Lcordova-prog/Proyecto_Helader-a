@@ -1,117 +1,46 @@
 
-09/07/2022 21:46:08.337
- Cliente:  Maria Compro una barquilla con : Sirope de chocolate-Mora-Fresa
-09/07/2022 21:46:08.337
- Cliente:  Luis Compro una barquilla con : Cereales-Fresa-Fresa
+10/07/2022 22:26:43.889
 
-09/07/2022 22:23:40.149
+ Cliente:  Maria Victoria No realizo ninguna compra
 
-09/07/2022 22:51:43.265
+10/07/2022 22:26:43.889
 
- Cliente:  Maria Compro una barquilla con: ChocolateCon un valor: 3
+ Cliente:  Luis Cordova No realizo ninguna compra
 
-09/07/2022 22:54:50.008
- Cliente:  Maria Compro una barquilla con : Galletas-Parchita-Kiwi5$
+10/07/2022 22:26:43.889
 
-09/07/2022 23:16:52.879
- Cliente:  Maria Compro una barquilla con : Fresa-Chocolate-ChocolateCon un valor: 5$
+ Cliente:  Chantal Alcala No realizo ninguna compra
 
-09/07/2022 23:16:52.879
- Cliente:  Luis Compro una barquilla con : Chocolate-Chocolate-ChocolateCon un valor: 5$
+10/07/2022 22:26:43.889
 
-10/07/2022 10:36:12.283
+10/07/2022 22:29:32.211
 
-10/07/2022 10:37:47.442
+ Cliente:  Maria Victoria No realizo ninguna compra
 
-10/07/2022 10:38:31.666
+10/07/2022 22:29:32.211
 
-10/07/2022 11:41:31.680
+ Cliente:  Luis Cordova No realizo ninguna compra
 
- Cliente:  Maria Compro una barquilla con : Galletas-Cereales-Chocolate-Parchita-ParchitaCon un valor: 7$
+10/07/2022 22:29:32.211
 
-10/07/2022 11:44:34.946
- Cliente:  Maria Compro una barquilla con : Chocolate-Chocolate-ChocolateCon un valor: 5$
+ Cliente:  Chantal Alcala No realizo ninguna compra
 
-10/07/2022 11:50:13.119
+10/07/2022 22:29:32.211
 
- Cliente:  Maria Compro una barquilla con : Sirope de chocolate-Fresa-Mantecado-Chocolate Con un valor: 6$
+ Cliente:  Maria Victoria Compro una barquilla con : Sirope de chocolate-Sirope de chocolate-Chocolate-Chocolate-Chocolate Con un valor: 7$
 
-10/07/2022 11:51:53.751
+10/07/2022 22:29:32.211
 
- Cliente:  Maria Compro una barquilla con : Galletas-Cereales-Mantecado-Fresa-Chocolate Con un valor: 7$
+ Cliente:  Luis Cordova Compro una barquilla con : Sirope de chocolate-Mantecado-Fresa-Fresa Con un valor: 6$
 
-10/07/2022 12:02:03.617
- Cliente:  Maria Compro una barquilla con : Nutella-Fresa-Chocolate Con un valor: 5$
+10/07/2022 22:29:32.211
+ Cliente:  Chantal Alcala Compro una barquilla con : Kiwi-Parchita-Chocolate Con un valor: 5$
 
-10/07/2022 12:02:03.617
- 
- Cliente:  Luis Compro una barquilla con: Mantecado-Mantecado Con un valor: 7$
+10/07/2022 22:34:37.985
+ Cliente:  Maria Victoria Compro una barquilla con : Mora-Mora-Mora Con un valor: 5$
 
-10/07/2022 12:24:56.772
+10/07/2022 22:34:37.985
+ Cliente:  Luis Cordova Compro una barquilla con : Mantecado-Mantecado-Mantecado Con un valor: 5$
 
- Cliente:  Maria Compro una barquilla con : Galletas-Kiwi-Mantecado-Mantecado Con un valor: 6$
-
-10/07/2022 14:21:59.715
-
-10/07/2022 14:22:30.207
-
-10/07/2022 14:22:30.207
-
-10/07/2022 14:22:30.207
-
-10/07/2022 14:22:30.207
-
-10/07/2022 14:22:30.207
-
-10/07/2022 14:22:30.207
-
-10/07/2022 18:39:59.660
-
-10/07/2022 18:45:04.869
- Cliente:  Maria Victoria Compro una barquilla con : Mantecado-Fresa-Chocolate Con un valor: 5$
-
-10/07/2022 20:18:04.552
-
-10/07/2022 20:23:44.449
-
-10/07/2022 20:24:19.021
-No hubo ventas
-10/07/2022 20:26:15.081
- Cliente: Maria Victoria No realizo ninguna compra
-10/07/2022 20:26:15.081
-
- Cliente:  Luis Cordova Compro una barquilla con : Nutella-Arequipe-Mora-Kiwi-Chocolate Con un valor: 7$
-
-10/07/2022 20:33:07.047
- Cliente: Maria Victoria No realizo ninguna compra
-10/07/2022 20:41:52.770
-
- Cliente:  Maria Victoria Compro una barquilla con : Sirope de caramelo-Sirope de chocolate-Mantecado-Fresa-Chocolate Con un valor: 7$
-
-10/07/2022 20:44:22.320
- 
- Cliente:  Maria Victoria Compro una barquilla con: Parchita-Kiwi Con un valor: 4$
-
-10/07/2022 20:46:29.158
- Cliente: Maria Victoria No realizo ninguna compra
-10/07/2022 20:46:29.158
- Cliente: Luis Cordova No realizo ninguna compra
-10/07/2022 20:46:29.158
- Cliente: Chantal Alcala No realizo ninguna compra
-10/07/2022 20:46:29.158
-
-10/07/2022 20:48:39.169
- Cliente: Maria Victoria No realizo ninguna compra
-10/07/2022 20:48:39.169
- Cliente: Luis Cordova No realizo ninguna compra
-10/07/2022 20:48:39.169
- Cliente: Chantal Alcala No realizo ninguna compra
-10/07/2022 20:48:39.169
-
-10/07/2022 20:50:54.565
- Cliente: Maria Victoria No realizo ninguna compra
-10/07/2022 20:50:54.565
- Cliente: Luis Cordova No realizo ninguna compra
-10/07/2022 20:50:54.565
- Cliente: Chantal Alcala No realizo ninguna compra
-10/07/2022 20:50:54.565
+10/07/2022 22:34:37.985
+ Cliente:  Chantal Alcala Compro una barquilla con : Sirope de fresa-Sirope de fresa-Chocolate Con un valor: 5$

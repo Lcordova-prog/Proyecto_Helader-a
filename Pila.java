@@ -2,24 +2,19 @@
 package com.mycompany.nicecream;
                   
 
-
+// Nodo de la pila
 class nodo1 {
 
     String sabor;
-    String Complemento;
     nodo1 siguiente;
 
     public nodo1(String sabor) {
         this.sabor = sabor;
     }
 
-    public nodo1(String sabor, String Complemento) {
-        this.sabor = sabor;
-        this.Complemento = Complemento;
-    }
+    
 
 }
-
 public class Pila {
 
     int porciones;
@@ -29,6 +24,7 @@ public class Pila {
         return top == null;
     }
 
+    //Método para insertar los sabores y toppings de el helado
     public void Apilar(String sabor) {
         nodo1 x = new nodo1(sabor);
         x.siguiente = top;
@@ -38,30 +34,31 @@ public class Pila {
 
     }
 
-    public String Barquilla() {
+    public String Barquilla() { // Método que muestra el siguiente del siguiente del siguiente del siguiente del top 
         return top.siguiente.siguiente.siguiente.siguiente.sabor;
     }
 
-    public String Barquilla2() {
+    public String Barquilla2() { // Método que muestra el siguiente del siguiente del siguiente del top
         return top.siguiente.siguiente.siguiente.sabor;
     }
 
-    public String Barquilla3() {
+    public String Barquilla3() { // Método que muestra el siguiente del siguente del top
         return top.siguiente.siguiente.sabor;
     }
 
-    public String Barquilla4() {
+    public String Barquilla4() { // Método que muestra el siguiente del top
         return top.siguiente.sabor;
     }
 
-    public String Barquilla5() {
+    public String Barquilla5() { // Método que muestra el top de la pila
         return top.sabor;
     }
 
+    // Método que muestra la cantidad de porciones y toppings
     public int CantidadPor() {
         return porciones;
     }
-
+//Método que muestra el top del contenido de la pila
     public String mostrar() {
         if (vacia()) {
             System.out.println("No hay más porciones");
@@ -71,6 +68,7 @@ public class Pila {
         }
     }
 
+// Método para eliminar sabores y toppings 
     public nodo1 Borrar() {
         if (vacia()) {
             return top;
@@ -84,7 +82,7 @@ public class Pila {
         }
 
     }
-
+// Método para mostrar toda la pila
     public String MostrarCuenta() {
         nodo1 a = top;
         String p = "";

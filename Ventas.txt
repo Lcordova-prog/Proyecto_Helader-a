@@ -64,3 +64,54 @@
 10/07/2022 14:22:30.207
 
 10/07/2022 14:22:30.207
+
+10/07/2022 18:39:59.660
+
+10/07/2022 18:45:04.869
+ Cliente:  Maria Victoria Compro una barquilla con : Mantecado-Fresa-Chocolate Con un valor: 5$
+
+10/07/2022 20:18:04.552
+
+10/07/2022 20:23:44.449
+
+10/07/2022 20:24:19.021
+No hubo ventas
+10/07/2022 20:26:15.081
+ Cliente: Maria Victoria No realizo ninguna compra
+10/07/2022 20:26:15.081
+
+ Cliente:  Luis Cordova Compro una barquilla con : Nutella-Arequipe-Mora-Kiwi-Chocolate Con un valor: 7$
+
+10/07/2022 20:33:07.047
+ Cliente: Maria Victoria No realizo ninguna compra
+10/07/2022 20:41:52.770
+
+ Cliente:  Maria Victoria Compro una barquilla con : Sirope de caramelo-Sirope de chocolate-Mantecado-Fresa-Chocolate Con un valor: 7$
+
+10/07/2022 20:44:22.320
+ 
+ Cliente:  Maria Victoria Compro una barquilla con: Parchita-Kiwi Con un valor: 4$
+
+10/07/2022 20:46:29.158
+ Cliente: Maria Victoria No realizo ninguna compra
+10/07/2022 20:46:29.158
+ Cliente: Luis Cordova No realizo ninguna compra
+10/07/2022 20:46:29.158
+ Cliente: Chantal Alcala No realizo ninguna compra
+10/07/2022 20:46:29.158
+
+10/07/2022 20:48:39.169
+ Cliente: Maria Victoria No realizo ninguna compra
+10/07/2022 20:48:39.169
+ Cliente: Luis Cordova No realizo ninguna compra
+10/07/2022 20:48:39.169
+ Cliente: Chantal Alcala No realizo ninguna compra
+10/07/2022 20:48:39.169
+
+10/07/2022 20:50:54.565
+ Cliente: Maria Victoria No realizo ninguna compra
+10/07/2022 20:50:54.565
+ Cliente: Luis Cordova No realizo ninguna compra
+10/07/2022 20:50:54.565
+ Cliente: Chantal Alcala No realizo ninguna compra
+10/07/2022 20:50:54.565

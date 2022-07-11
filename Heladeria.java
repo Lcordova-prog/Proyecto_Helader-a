@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.Scanner;
+// @marivic_2009
 
 public class Heladeria {
 
@@ -41,14 +42,16 @@ public class Heladeria {
         int nutella = 0;
         int cereales = 0;
         int galleta = 0;
+        //Aqui termina
         int Sabor = 2;
         int capa = 0;
         int po = 0;
         int pe = 0;
 
         do {
-            System.out.println("         <HELADERIA NICE CREAM> \n"
-                    + "<HACE HELADOS DE VERDAD EN POCOS MINUTOS> ");
+            if (co.vacio()) {
+                   System.out.println("         <HELADERIA NICE CREAM> \n"
+                    + "<HACEMOS HELADOS DE VERDAD EN POCOS MINUTOS> ");
             System.out.println("\t" + "--------------------");
             System.out.println("\t" + "| 1. Abrir Tienda   |\n"
                     + "\t" + "| 2. Ver            |\n"
@@ -57,8 +60,22 @@ public class Heladeria {
                     + "\t" + "| 5. Ver Cuenta     |\n"
                     + "\t" + "| 6. Elegir toppings|\n"
                     + "\t" + "| 7. Facturar       |\n"
-                    + "\t" + "| 8. Salir          |");
+                    + "\t" + "| 0. Salir          |");
             System.out.println("\t" + "--------------------");
+            }else{
+                 System.out.println("         <HELADERIA NICE CREAM> \n"
+                    + "<HACEMOS HELADOS DE VERDAD EN POCOS MINUTOS> ");
+            System.out.println("\t" + "--------------------");
+            System.out.println("\t" + "| 1. Abrir Tienda   |\n"
+                    + "\t" + "| 2. Ver            |\n"
+                    + "\t" + "| 3. Atender        |\n"
+                    + "\t" + "| 4.Elegir porciones|\n"
+                    + "\t" + "| 5. Ver Cuenta     |\n"
+                    + "\t" + "| 6. Elegir toppings|\n"
+                    + "\t" + "| 0. Salir          |");
+            System.out.println("\t" + "--------------------");  
+            }
+         
             capa = leer.nextInt();
             switch (capa) {
 
@@ -95,6 +112,9 @@ public class Heladeria {
                             FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt", true);
                             FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt")) {
                         fw.write("\r\n" + sdf.format(fechaActual) + " " + hora + "\r" + "\n");
+                          if (pi.porciones == 0 && !co.vacio()) {
+                              fw.write(" Cliente: "+co.Primero()+" No realizo ninguna compra");
+                          }
                         if (pi.porciones == 1) {
 
                             fw.write("\n Cliente:  " + co.Primero() + " Compro una barquilla con: " + pi.Barquilla5() + " Con un valor: " + Sabor + "$" + "\r" + "\n");
@@ -126,7 +146,11 @@ public class Heladeria {
                     } catch (IOException e) {
                         System.out.println("ERROR E/S: " + e);
                     }
-                    co.Atender();
+                      if (!co.vacio()) {
+                           co.Atender();
+                    }else{
+                          System.out.println("No quedan personas");
+                      }
                     limite = 0;
                     limite2 = 0;
                     Sabor = 2;
@@ -144,13 +168,21 @@ public class Heladeria {
                         if (!co.vacio()) {
 
                             System.out.println("1. Chocolate \n"
+                                    + "  ----------\n"
                                     + "2. Fresa \n"
+                                    + "  ----------\n"
                                     + "3. Mantecado \n"
+                                    + "  ----------\n"
                                     + "4. Mora\n"
+                                    +  " ----------\n"
                                     + "5. Kiwi\n"
+                                    + " ----------\n"
                                     + "6. Parchita\n"
+                                    + " ----------\n"
                                     + "7. Ver\n"
+                                    + " ----------\n"
                                     + "8. Borrar\n"
+                                    + " ----------\n"
                                     + "0. Salir");
                             po = leer.nextInt();
                             if (limite < 3 || po == 7 || po == 8 || po == 0) {
@@ -193,7 +225,7 @@ public class Heladeria {
                                         break;
 
                                     case 7:
-                                        System.out.println(pi.mostrar());
+                                        System.out.println("Top del helado: "+"<"+pi.mostrar()+">");
                                         break;
                                     case 8:
                                         if (!pi.vacia()) {
@@ -229,7 +261,7 @@ public class Heladeria {
 
                                 }
                             } else {
-                                System.out.println("No puede solicitar más porciones");
+                                System.out.println("No puede solicitar más porciones de helado");
                             }
                         } else {
                             System.out.println("No hay clientes");
@@ -255,16 +287,27 @@ public class Heladeria {
                 case 6:
                     do {
                         if (!co.vacio()) {
-                            System.out.println("1.  Sirope de chocolate \n"
+                            System.out.println("|TIPOS DE TOPPINGS|\n"
+                                    + "1.  Sirope de chocolate \n"
+                                    + "   ----------\n"
                                     + "2. Sirope de fresa \n"
+                                    + "   ----------\n"
                                     + "3. Sirope de caramelo \n"
+                                    + "   ----------\n"
                                     + "4. Arequipe\n"
+                                    + "   ----------\n"
                                     + "5. Nutella\n"
+                                    + "   ----------\n"
                                     + "6. Cereales\n"
+                                    + "   ----------\n"
                                     + "7. Galletas\n"
+                                    + "   ----------\n"
                                     + "8. Borrar\n"
+                                    + "   ----------\n"
                                     + "9. Ver cantidad\n"
+                                    + "   ----------\n"
                                     + "10. Ver pila\n"
+                                    + "   ----------\n"
                                     + "0. Salir");
                             pe = leer.nextInt();
                             if (limite2 < 2 || pe == 9 || pe == 8 || pe == 10) {
@@ -350,7 +393,7 @@ public class Heladeria {
                                         break;
 
                                     case 10:
-                                        System.out.println(pi.mostrar());
+                                         System.out.println("Top del helado: "+"<"+pi.mostrar()+">");
                                         break;
                                 }
 
@@ -367,8 +410,7 @@ public class Heladeria {
 
                 case 7:
                     if (!co.vacio()) {
-
-                        try (
+                             try (
                                 FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt", true);
                                 FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt")) {
 
@@ -399,9 +441,12 @@ public class Heladeria {
                             System.out.println("ERROR E/S: " + e);
                         }
 
-                    } else {
-                        System.out.println("No hay ventas para facturar");
+                   
+                        }else{
+                          System.out.println("No hay personas para facturar");
                     }
+
+                      
                     break;
 
             }

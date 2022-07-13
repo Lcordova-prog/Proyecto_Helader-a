@@ -96,4 +96,9 @@ public class Pila {
         return p;
     }
 
+    public void borraRapido(){
+        while(!vacia()){
+            Borrar();
+        }
+    }
 }

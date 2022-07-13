@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.Scanner;
-// @marivic_2009
+
 
 public class Heladeria {
 
@@ -59,7 +59,8 @@ public class Heladeria {
                     + "\t" + "| 4.Elegir porciones|\n"
                     + "\t" + "| 5. Ver Cuenta     |\n"
                     + "\t" + "| 6. Elegir toppings|\n"
-                    + "\t" + "| 7. Facturar       |\n"
+                    + "\t" + "| 7 Eliminar Pila   |\n"
+                    + "\t" + "| 8. Facturar       |\n"
                     + "\t" + "| 0. Salir          |");
             System.out.println("\t" + "--------------------");
             }else{
@@ -72,6 +73,7 @@ public class Heladeria {
                     + "\t" + "| 4.Elegir porciones|\n"
                     + "\t" + "| 5. Ver Cuenta     |\n"
                     + "\t" + "| 6. Elegir toppings|\n"
+                    + "\t" + "| 7 Eliminar Pila   |\n"
                     + "\t" + "| 0. Salir          |");
             System.out.println("\t" + "--------------------");  
             }
@@ -109,8 +111,10 @@ public class Heladeria {
                 case 3:
                     
                       try (
+                              
                             FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt", true);
                             FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\Ventas.txt")) {
+                          
                           if (!co.vacio()) {
                             fw.write("\r\n" + sdf.format(fechaActual) + " " + hora + "\r" + "\n");  
                           }
@@ -158,11 +162,7 @@ public class Heladeria {
                     limite2 = 0;
                     Sabor = 2;
                   
-                    pi.Borrar();
-                    pi.Borrar();
-                    pi.Borrar();
-                    pi.Borrar();
-                    pi.Borrar();
+                   pi.borraRapido();
                      pi.porciones = 0;
                     break;
 
@@ -184,7 +184,7 @@ public class Heladeria {
                                     + " ----------\n"
                                     + "7. Ver\n"
                                     + " ----------\n"
-                                    + "8. Borrar\n"
+                                    + "8. Ver cantidad\n"
                                     + " ----------\n"
                                     + "0. Salir");
                             po = leer.nextInt();
@@ -230,34 +230,8 @@ public class Heladeria {
                                     case 7:
                                         System.out.println("Top del helado: "+"<"+pi.mostrar()+">");
                                         break;
+                                  
                                     case 8:
-                                        if (!pi.vacia()) {
-                                            if (pi.Barquilla5().equals("Chocolate")) {
-                                                chocolate--;
-                                            }
-                                            if (pi.Barquilla5().equals("Fresa")) {
-                                                Fresa--;
-                                            }
-                                            if (pi.Barquilla5().equals("Mantecado")) {
-                                                Mantecado--;
-                                            }
-                                            if (pi.Barquilla5().equals("Mora")) {
-                                                Mora--;
-                                            }
-                                            if (pi.Barquilla5().equals("Kiwi")) {
-                                                Kiwi--;
-                                            }
-                                            if (pi.Barquilla5().equals("Parchita")) {
-                                                Parchita--;
-                                            }
-                                            pi.Borrar();
-                                            limite--;
-                                            Sabor--;
-                                        } else {
-                                            System.out.println("No hay porciones");
-                                        }
-                                        break;
-                                    case 9:
                                         System.out.println("La cantidad es: " + pi.CantidadPor());
 
                                         break;
@@ -305,15 +279,13 @@ public class Heladeria {
                                     + "   ----------\n"
                                     + "7. Galletas\n"
                                     + "   ----------\n"
-                                    + "8. Borrar\n"
+                                    + "8. Ver cantidad\n"
                                     + "   ----------\n"
-                                    + "9. Ver cantidad\n"
-                                    + "   ----------\n"
-                                    + "10. Ver pila\n"
+                                    + "9. Ver pila\n"
                                     + "   ----------\n"
                                     + "0. Salir");
                             pe = leer.nextInt();
-                            if (limite2 < 2 || pe == 9 || pe == 8 || pe == 10) {
+                            if (limite2 < 2 || pe == 8 || pe == 9 || pe == 0) {
                                 switch (pe) {
                                     case 1:
                                         pi.Apilar("Sirope de chocolate");
@@ -358,44 +330,13 @@ public class Heladeria {
                                         limite2++;
                                         break;
 
+                                   
                                     case 8:
-                                        if (!pi.vacia()) {
-                                            if (pi.Barquilla5().equals("Sirope de chocolate")) {
-                                                sichocolate--;
-                                            }
-                                            if (pi.Barquilla5().equals("Sirope de fresa")) {
-                                                sifresa--;
-                                            }
-                                            if (pi.Barquilla5().equals("Sirope de caramelo")) {
-                                                sicaramelo--;
-                                            }
-                                            if (pi.Barquilla5().equals("Arequipe")) {
-                                                arequipe--;
-                                            }
-                                            if (pi.Barquilla5().equals("Nutella")) {
-                                                nutella--;
-                                            }
-                                            if (pi.Barquilla5().equals("Cereales")) {
-                                                cereales--;
-                                            }
-                                            if (pi.Barquilla5().equals("Galletas")) {
-                                                galleta--;
-                                            }
-                                            pi.Borrar();
-                                            limite2--;
-                                            Sabor--;
-
-                                        } else {
-                                            System.out.println("No hay porciones");
-                                        }
-
-                                        break;
-                                    case 9:
                                         System.out.println("La cantidad es: " + pi.CantidadPor() + "topping");
 
                                         break;
 
-                                    case 10:
+                                    case 9:
                                          System.out.println("Top del helado: "+"<"+pi.mostrar()+">");
                                         break;
                                 }
@@ -410,30 +351,227 @@ public class Heladeria {
 
                     } while (pe != 0);
                     break;
-
                 case 7:
+                                            if (!pi.vacia()) {
+                                            if (pi.Barquilla5().equals("Sirope de chocolate")) {
+                                                sichocolate--;
+                                                 limite2--;
+                                            }
+                                            if (pi.Barquilla5().equals("Sirope de fresa")) {
+                                                sifresa--;
+                                                 limite2--;
+                                            }
+                                            if (pi.Barquilla5().equals("Sirope de caramelo")) {
+                                                sicaramelo--;
+                                                 limite2--;
+                                            }
+                                            if (pi.Barquilla5().equals("Arequipe")) {
+                                                arequipe--;
+                                                 limite2--;
+                                            }
+                                            if (pi.Barquilla5().equals("Nutella")) {
+                                                nutella--;
+                                                 limite2--;
+                                            }
+                                            if (pi.Barquilla5().equals("Cereales")) {
+                                                cereales--;
+                                                 limite2--;
+                                            }
+                                            if (pi.Barquilla5().equals("Galletas")) {
+                                                galleta--;
+                                                 limite2--;
+                                            }
+                                            //porciones
+                                                if (pi.Barquilla5().equals("Chocolate")) {
+                                                chocolate--;
+                                                limite--;
+                                            }
+                                            if (pi.Barquilla5().equals("Fresa")) {
+                                                Fresa--;
+                                                 limite--;
+                                            }
+                                            if (pi.Barquilla5().equals("Mantecado")) {
+                                                Mantecado--;
+                                                 limite--;
+                                            }
+                                            if (pi.Barquilla5().equals("Mora")) {
+                                                Mora--;
+                                                 limite--;
+                                            }
+                                            if (pi.Barquilla5().equals("Kiwi")) {
+                                                Kiwi--;
+                                                 limite--;
+                                            }
+                                            if (pi.Barquilla5().equals("Parchita")) {
+                                                Parchita--;
+                                                 limite--;
+                                            }
+                                            pi.Borrar();
+                                           
+                                            Sabor--;
+
+                                        } else {
+                                            System.out.println("No hay porciones");
+                                        }
+
+                                      
+                        break;
+                case 8:
                     if (co.vacio()) {
+                       
                              try (
                                 FileWriter fw = new FileWriter("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt", true);
                                 FileReader fr = new FileReader("C:\\Users\\Pc1\\Desktop\\Proyetos_Java\\NiceCream\\src\\main\\java\\com\\mycompany\\nicecream\\descuentos_inventario.txt")) {
 
-                            /*   for (int i = 0; i < espacios.length; i++) {
-                                       espacios[i] = leer.nextInt();
-                                          if (i == 0) {
-                                              espacios[i] = numeromenor;
-                                          }else if(espacios[i] < numeromenor){
-                                             
-                                          }
-                                      }
-                             */
+                         
                             fw.write("\r\n" + sdf.format(fechaActual) + " " + hora + "\r" + "\n");
-                            for (int i = 0; i < 5; i++) {
-                                if (i == 0) {
-                                    fw.write("\r\n" + "Porciones de helados más vendidas: " + "\r\n" + "Chocolate: " + chocolate + "Uds" + "\r\n" + "Fresa:" + Fresa + "Uds" + "\r\n" + "Mantecado: " + Mantecado + "Uds" + "\r\n" + " Mora: " + Mora + " Uds " + "\r\n" + " Kiwi: " + Kiwi + "Uds" + "\r\n" + "Parchita: " + Parchita + "Uds" + "\r\n");
-                                    fw.write("\r\n" + "Toppings más vendidos: " + "\r\n" + "Sirope de chocolate: " + sichocolate + "Uds" + "\r\n" + " Sirope de fresa: " + sifresa + "Uds" + "\r\n" + " Sirope de caramelo: " + sicaramelo + "Uds" + "\r\n" + " Arequipe: " + arequipe + "Uds" + "\r\n" + " Nutella: " + nutella + "Uds" + "\r\n" + " Cereales: " + cereales + "Uds" + "\r\n" + " Galletas: " + galleta + "Uds" + "\r\n");
-                                }
-                            }
-
+                     
+                          if (chocolate > Fresa || chocolate > Mantecado || chocolate > Mora || chocolate > Kiwi || chocolate > Parchita) {
+                                       fw.write("\r\n" + "Porciones de helados más vendidas: " + "\r\n" + "chocolate: " + chocolate + "Uds" + "\r\n");
+                               
+                                 }
+                                      if (Fresa > chocolate || Fresa > Mora || Fresa > Mantecado || Fresa >  Kiwi || Fresa > Parchita) {
+                                        fw.write("\r\n" + "Porciones de helados más vendidas: " + "\r\n" + "Fresa: " + Fresa + "Uds" + "\r\n");  
+                             
+                                 }
+                                      if (Mantecado > chocolate || Mantecado >Fresa || Mantecado > Mora || Mantecado > Kiwi || Mantecado > Parchita) {
+                                        fw.write("\r\n" + "Porciones de helados más vendidas: " + "\r\n" + "Mantecado: " + Mantecado + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                      if (Mora > chocolate || Mora >Fresa  || Mora > Mantecado  || Mora > Kiwi || Mora > Parchita) {
+                                        fw.write("\r\n" + "Porciones de helados más vendidas: " + "\r\n" + "Mora: " + Mora + "Uds" + "\r\n");
+                                    
+                                  
+                                      }
+                                      if (Kiwi > chocolate || Kiwi >Fresa  || Kiwi > Mantecado || Kiwi> Mora   || Kiwi > Parchita) {
+                                        fw.write("\r\n" + "Porciones de helados más vendidas: " + "\r\n" + "Kiwi: " + Kiwi + "Uds" + "\r\n");                                                                                                                                         
+                                
+                                 }
+                                      if (Parchita > chocolate || Parchita > Mantecado || Parchita > Mora || Parchita > Kiwi || Parchita > Fresa) {
+                                        fw.write("\r\n" + "Porciones de helados más vendidas: " + "\r\n" + "Parchita: " + Parchita + "Uds" + "\r\n");
+                                        
+                                    
+                                    }
+                    
+                                 
+                                 
+//                                 //Por menor
+                                   if (chocolate < Fresa || chocolate < Mantecado || chocolate < Mora ||chocolate < Kiwi || chocolate < Parchita) {
+                                       fw.write("\r\n" + "Porciones de helados menos vendida: " + "\r\n" + "chocolate: " + chocolate + "Uds" + "\r\n");
+                                   }
+//                                 //Aqui
+                                    if (Fresa < chocolate || Fresa < Mora || Fresa < Mantecado || Fresa <  Kiwi || Fresa < Parchita) {
+                                        fw.write("\r\n" + "Porciones de helados menos vendida: " + "\r\n" + "Fresa: " + Fresa + "Uds" + "\r\n");
+                                         
+                                      
+                                        
+                                       }
+//                                        //Aqui
+//                                 
+                                      if (Mantecado < chocolate || Mantecado <Fresa || Mantecado < Mora || Mantecado < Kiwi || Mantecado < Parchita) {
+                                        fw.write("\r\n" + "Porciones de helados menos vendida: " + "\r\n" + "Mantecado: " + Mantecado + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+//                                        //Aqui
+                                         if (Mora < chocolate || Mora <Fresa  || Mora < Mantecado  || Mora < Kiwi || Mora < Parchita) {
+                                        fw.write("\r\n" + "Porciones de helados menos vendida: " + "\r\n" + "Mora: " + Mora + "Uds" + "\r\n");
+                                    
+                                  
+                                      }
+//                                     
+//                                    
+//                                       //Aqui
+                                        if (Kiwi < chocolate || Kiwi < Fresa  || Kiwi < Mantecado || Kiwi < Mora   || Kiwi < Parchita) {
+                                        fw.write("\r\n" + "Porciones de helados menos vendida: " + "\r\n" + "Kiwi: " + Kiwi + "Uds" + "\r\n");                                                                                                                                         
+                                 
+                                 }   
+                                      
+                                 
+                                       //Toppings
+                                         
+                                       if (sichocolate  > sifresa || sichocolate > sicaramelo || sichocolate > arequipe ||sichocolate > nutella || sichocolate > cereales || sichocolate > galleta) {
+                                       fw.write("\r\n" + "Toppings más vendido: " + "\r\n" + "sirope de chocolate: " + sichocolate + "Uds" + "\r\n");
+                                 }
+                                 //Aqui
+                                    if (sifresa > sichocolate || sifresa > sicaramelo || sifresa > arequipe || sifresa >  nutella || sifresa > cereales || sifresa > galleta ) {
+                                        fw.write("\r\n" + "Toppings más vendido: " + "\r\n" + "sirope de fresa: " + sifresa + "Uds" + "\r\n");
+                                         
+                                      
+                                        
+                                       }
+                                        //Aqui
+                                 
+                                      if (sicaramelo > sichocolate || sicaramelo >sifresa || sicaramelo > arequipe || sicaramelo > nutella || sicaramelo > cereales || sicaramelo > galleta ) {
+                                        fw.write("\r\n" + "Toppings más vendido: " + "\r\n" + "sirope de caramelo: " + sicaramelo + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                        //Aqui
+                                      if (arequipe > sichocolate || arequipe >sifresa || arequipe > sicaramelo || arequipe > nutella || arequipe > cereales || arequipe > galleta ) {
+                                        fw.write("\r\n" + "Toppings más vendido: " + "\r\n" + "arequipe: " + arequipe + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                     
+                                    
+                                       //Aqui
+                                       if (nutella > sichocolate || nutella >sifresa || nutella > sicaramelo || nutella > arequipe || nutella > cereales || nutella > galleta ) {
+                                        fw.write("\r\n" + "Toppings más vendido: " + "\r\n" + "nutella: " + nutella + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                      
+                                      //Aqui
+                                       if (cereales > sichocolate || cereales >sifresa || cereales > sicaramelo || cereales > arequipe || cereales > nutella || cereales > galleta ) {
+                                        fw.write("\r\n" + "Toppings más vendido: " + "\r\n" + "cereales: " + cereales + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                 
+                                 //Por menor
+                                  if (sichocolate  < sifresa || sichocolate < sicaramelo || sichocolate < arequipe ||sichocolate < nutella || sichocolate < cereales || sichocolate < galleta) {
+                                       fw.write("\r\n" + "Toppings menos vendido: " + "\r\n" + "sirope de chocolate: " + sichocolate + "Uds" + "\r\n");
+                                 }
+                                 //Aqui
+                                    if (sifresa < sichocolate || sifresa < sicaramelo || sifresa < arequipe || sifresa <  nutella || sifresa < cereales || sifresa < galleta ) {
+                                        fw.write("\r\n" + "Toppings menos vendido: " + "\r\n" + "sirope de fresa: " + sifresa + "Uds" + "\r\n");
+                                         
+                                      
+                                        
+                                       }
+                                        //Aqui
+                                 
+                                      if (sicaramelo < sichocolate || sicaramelo < sifresa || sicaramelo < arequipe || sicaramelo < nutella || sicaramelo < cereales || sicaramelo < galleta ) {
+                                        fw.write("\r\n" + "Toppings menos vendido: " + "\r\n" + "sirope de caramelo: " + sicaramelo + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                        //Aqui
+                                      if (arequipe < sichocolate || arequipe < sifresa || arequipe < sicaramelo || arequipe < nutella || arequipe < cereales || arequipe < galleta ) {
+                                        fw.write("\r\n" + "Toppings menos vendido: " + "\r\n" + "arequipe: " + arequipe + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                     
+                                    
+                                       //Aqui
+                                       if (nutella < sichocolate || nutella <sifresa || nutella < sicaramelo || nutella < arequipe || nutella < cereales || nutella < galleta ) {
+                                        fw.write("\r\n" + "Toppings menos vendido: " + "\r\n" + "nutella: " + nutella + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                      
+                                      //Aqui
+                                       if (cereales < sichocolate || cereales <sifresa || cereales < sicaramelo || cereales < arequipe || cereales < nutella || cereales < galleta ) {
+                                        fw.write("\r\n" + "Toppings menos vendido: " + "\r\n" + "cereales: " + cereales + "Uds" + "\r\n");
+                                                                                                
+                                      
+                                      }
+                                    
+                            fw.append("\n");
+                            
                             fw.flush();
                             int valor = fr.read();
                             while (valor != -1) {
@@ -445,14 +583,16 @@ public class Heladeria {
                         }
 
                    
-                        }
+                        }else{
+                        System.out.println("Espere que se atiendan a todos para poder efectuar la transacción");
+                    }
 
                       
                     break;
 
             }
 
-        } while (capa != 9);
+        } while (capa != 0);
 
     }
 
